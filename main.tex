@@ -119,10 +119,10 @@
 
 	Some of the key commands to do so:
 	\begin{itemize}
-		\item ":vsp" -> splits window vertically (or you can use ":vertical split")
+		\item ":vsp" /rightarrow splits window vertically (or you can use ":vertical split")
 		\item ":sp" -> splits window horizontally (or you can use ":split")
-		\item "Ctrl + w" -> navigate between windows (use it followed by arrow keys to do it more efficiently)
-		\item "Ctrl + w" followed by '>' or '<'' to increase or decrease window size.
+		\item "Ctrl + w" /rightarrow navigate between windows (use it followed by arrow keys to do it more efficiently)
+		\item "Ctrl + w" followed by '>' or '<'' /rightarrow to increase or decrease window size.
 	\end{itemize}
 
 	\paragraph{Tabs:} Vim also supports the use of tabs, allowing users to work with multiple files within the same Vim session.
@@ -132,9 +132,9 @@
 	Some of the key commands to do so:
 	\begin{itemize}
 		\item ":tabnew" or ":tabnew <filename>" -> opens new tab
-		\item "gt" -> switch to the next tab
-		\item "gT" -> switch to the previous tab
-		\item ":tabclose" -> tabclose
+		\item "gt" /rightarrow switch to the next tab
+		\item "gT" /rightarrow switch to the previous tab
+		\item ":tabclose" /rightarrow tabclose
 	\end{itemize}
 
 	\subsubsection{Folding}
@@ -144,9 +144,9 @@
 
 	Some of the key commands to do so:
 	\begin{itemize}
-		\item zf followed by a motion -> create a fold for the text covered by the specified motion.
-		\item za -> toggle fold and unfold at the position that cursor points at.
-		\item zd -> delete the fold at the cursor without deleting its contents, just the fold itself.
+		\item zf followed by a motion /rightarrow create a fold for the text covered by the specified motion.
+		\item za /rightarrow toggle fold and unfold at the position that cursor points at.
+		\item zd /rightarrow delete the fold at the cursor without deleting its contents, just the fold itself.
 	\end{itemize}
 
 	\subsubsection{Scripting}
@@ -168,5 +168,24 @@
 
 
 	With custom commands and functions, users can automate repetitive tasks, create complex editing workflows, and enhance Vim's functionality to suit their specific needs.
+
+	\subsection{Memory Profiling}
+	\subsubsection{Memory Leak}
+	Memory leaks occur when a program allocates memory dynamically but fails to release it properly when it's no longer needed.
+	As a result, memory that is no longer in use remains allocated, leading to wastage of system resources.
+	Over time, repeated memory leaks can deplete available memory, causing the program or even the entire system to slow down or crash.
+	
+	Causes of Memory Leaks:
+	\begin{itemize}
+		\item failure to free memory: For example not use free function in C, after you're done using malloc.
+
+		\item lost refrences: Losing track of pointers or references to dynamically allocated memory blocks can prevent the program from releasing them
+
+		\item cyclic refrences: In languages with automatic garbage collection (like java), cyclic refrences between two or more objects can prevent them from being garbage collected.
+
+		\item unclosed resources: Not closing the opened resources after you're done using them, like file handles, network connections, etc.
+	\end{itemize}
+
+
 
 \end{document}
