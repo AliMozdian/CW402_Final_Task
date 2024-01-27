@@ -186,6 +186,29 @@
 		\item unclosed resources: Not closing the opened resources after you're done using them, like file handles, network connections, etc.
 	\end{itemize}
 
+	\subsubsection{Memory Profilers}
+	\paragraph{Valgrind} is an open-source tool designed for debugging and profiling programs on Unix-like operating systems and it is a powerful tool for detecting and preventing memory leaks and other memory-related issues in software programs.
+	By providing detailed analysis and insights into memory usage and behavior, Valgrind helps developers identify and fix memory-related problems early in the development process, resulting in more reliable and efficient software systems.
+	Also one of the most widely used Valgrind tools for memory debugging is called Memcheck.
+
+	But the question remains that how does Valgrind helps with preventing memory leaks? We shortly discuss about it here.
+
+	\begin{itemize}
+
+		\item Memory Leak Detection:
+		Valgrind's Memcheck tool can detect memory leaks by tracking dynamically allocated memory blocks throughout the program's execution.
+		It identifies memory blocks that have been allocated but not deallocated, providing detailed information about their allocation point in the code.
+		This helps developers identify memory leaks and understand the root causes, facilitating timely fixes.
+
+		\item Memory Access Errors:
+		Valgrind can also identify various memory access errors, such as reading from or writing to uninitialized memory, accessing freed memory, and buffer overflows. Detaching these errors early in the development process, can lead to preventing potential memory corruption issues, which is very important to prevent these issue from the begining of their hidden existance.
+
+	\end{itemize}
+
+	There are of them (these methodes) but I think it suffices to say how usefull and important is this concept in programming, and it is the answer to why should we give credit to the tools which prevent this.
+
+
+	
 
 
 \end{document}
