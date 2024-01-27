@@ -1,7 +1,10 @@
-\documentclass{article}
-\title{Computer Workshop \\ Final Assignment}
-\author{Ali Mozdianfard}
-\date{January 2024}
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+
+\usepackage{hyperref}
+\usepackage{fancyhdr}
 
 \usepackage{graphicx}
 \usepackage{float}
@@ -10,6 +13,14 @@
 \usepackage{color}
 
 \usepackage[T1]{fontenc}
+
+
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Computer Workshop Course}
+\lhead{Final Assignment}
+\rfoot{Page \thepage}
 
 
 \definecolor{dkgreen}{rgb}{0,0.6,0}
@@ -34,10 +45,23 @@
 	stepnumber=1
 }
 
+
+
+\title{Computer Workshop \\ Final Assignment}
+\author{Ali Mozdianfard}
+\date{January 2024}
+
+
+
 \begin{document}
-	\maketitle
-	\newpage
 	
+	\begin{titlepage}
+	    \maketitle
+	    \thispagestyle{empty}
+	\end{titlepage}
+
+	\newpage
+
 	\tableofcontents
 	\newpage
 	
