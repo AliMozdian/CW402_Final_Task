@@ -5,6 +5,32 @@
 
 \usepackage{graphicx}
 
+\usepackage{listings}
+\usepackage{color}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+	language={},
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=4,
+	numbers=left,
+	stepnumber=1
+}
+
 \begin{document}
 	\maketitle
 	\newpage
@@ -74,5 +100,74 @@
 		\item git push tags
 		\item GitHub Actions compiles the main.tex automatically
 	\end{enumerate}
+
+	\section{Exploration Tasks}
+	\subsectoin{Vim Advanced Features}
+	In this section we are going to learn about three advanced features of VIM that you might doesn't expect them:
+	\begin{enumerate}
+		\item Multiple Windows and Tabs
+		\item Folding
+		\item Scripting
+	\end{enumerate}
+
+	Here I've search about them and made a short document for each of these 3 above.
+
+	\subsubsection{Multiple Windows and Tabs}
+	\paragraph{Multiple Windows:} In Vim, windows refer to individual panes within the editor's interface, each displaying a different section of the same or different file.
+	By splitting the editing window into multiple windows, users can view and edit different parts of a file concurrently, facilitating seamless multitasking and improving workflow efficiency.
+
+	Some of the key commands to do so:
+	\begin{itemize}
+		\item ":vsp" -> splits window vertically (or you can use ":vertical split")
+		\item ":sp" -> splits window horizontally (or you can use ":split")
+		\item "Ctrl + w" -> navigate between windows (use it followed by arrow keys to do it more efficiently)
+		\item "Ctrl + w" followed by '>' or '<'' to increase or decrease window size.
+	\end{itemize}
+
+	\paragraph{Tabs:} Vim also supports the use of tabs, allowing users to work with multiple files within the same Vim session.
+	Each tab represents a separate editing session, with its own set of windows and buffers, providing a convenient way to organize and
+	switch between different files or projects.
+
+	Some of the key commands to do so:
+	\begin{itemize}
+		\item ":tabnew" or ":tabnew <filename>" -> opens new tab
+		\item "gt" -> switch to the next tab
+		\item "gT" -> switch to the previous tab
+		\item ":tabclose" -> tabclose
+	\end{itemize}
+
+	\subsubsection{Folding}
+	Folding in Vim is a feature that allows you to collapse or "fold" sections of text within a file, making it easier to focus on specific parts of the document while hiding others.
+	It's particularly useful for navigating large files, organizing code, and managing complex structures such as functions, classes, or sections of documentation.
+	In general, there is two types of folding in VIM, Manual Folding and indentation-based Folding.
+
+	Some of the key commands to do so:
+	\begin{itemize}
+		\item zf followed by a motion -> create a fold for the text covered by the specified motion.
+		\item za -> toggle fold and unfold at the position that cursor points at.
+		\item zd -> delete the fold at the cursor without deleting its contents, just the fold itself.
+	\end{itemize}
+
+	\subsubsection{Scripting}
+	Vimscript is a powerful scripting language built into Vim, allowing users to automate tasks and customize Vim's behavior extensively.
+	Vimscript functions can be defined to perform specific actions, and custom commands can be created to execute sequences of Vim commands conveniently
+	Example of defining a Vimscript function to perform a custom action:
+
+	\begin{lslisting}
+	function! MyCustomFunction()
+    	" Vimscript code goes here
+		endfunction
+	\end{lslisting}
+
+	Example of creating a custom command to execute the above function:
+
+	\begin{lslisting}
+	command! MyCommand call MyCustomFunction()
+	\end{lslisting}
+
+
+	With custom commands and functions, users can automate repetitive tasks, create complex editing workflows, and enhance Vim's functionality to suit their specific needs.
+
+
 
 \end{document}
